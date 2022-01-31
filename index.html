@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --var_font-poppins: 'Poppins', 'sans-serif';
+            --var_font-roboto: 'Roboto', 'sans-serif';
+            --var_font-color-title: white;
+            --var_font-color: #AFB6C2;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        section {
+            background-color: #191816;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100vh;
+        }
+
+        .side-left {
+            position: relative;    
+            width: 100%;
+        }
+
+        .side-right {
+            width: 100%;
+        }
+
+        .side-right img{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .side-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 115px;
+        }
+
+        .form-container {
+            background-color: #24221F;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 60%;
+            border-radius: 4px;
+            color: var(--var_font-color);
+            
+        }
+
+        .form-container h1 {
+            font-family: var(--var_font-poppins);
+            color: var(--var_font-color-title);
+            font-weight: 600;
+            font-size: 2.4rem;
+        }
+
+        .form-container h2{
+            font-family: var(--var_font-roboto);
+            font-weight: 500;
+            font-size: 1.6rem;
+        }
+
+        .input-sign {
+            font-family: var(--var_font-roboto);
+            font-weight: 400;
+            font-size: 1.4rem;
+            width: 335px;
+            height: 44px;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <div class="side-left">
+            <div>
+                <img class="logo" src="./assets/logo.png" alt="">
+            </div>
+            <div class="form-container">
+                <h1>Faça seu login</h1>
+                <h2>Entre com suas informações de cadastro.</h2>
+
+                <label for="email">E-mail<br>
+                    <input id="email" type="text" class="input-email input-sign" placeholder="Digite seu e-mail">
+                </label>
+
+                <label for="password">Senha<br>
+                    <input id="password" type="password" class="input-password input-sign" placeholder="Digite sua senha">
+                </label>
+
+                
+                <label for="remember-me">
+                    <input id="remember-me" type="checkbox" name="Lembre-me" value="Lembre-me">
+                    Lembre-me
+                </label>
+                
+                
+                <p>Esqueci minha senha</p>
+                <button>Entrar</button>
+                <p>Não tem uma conta? Registre-se</p>
+            </div>
+        </div>
+
+        <div class="side-right">
+            <img src="./assets/side-image.jpg" alt="">
+        </div>
+    </section>
+    
+</body>
+</html>
