@@ -56,10 +56,10 @@
         }
 
         .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 115px;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 20px;
         }
 
         .form-container {
@@ -68,24 +68,44 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-width: 365px;
             width: 80%;
-            height: 60%;
+            padding-top: 20px;
+            padding-bottom: 20px;
             border-radius: 4px;
             color: var(--var_font-color);
+            margin: auto;
             
         }
 
-        .form-container h1 {
+        .login-img{
+            margin-right: 10px;
+        }
+
+        .header-form-container {
+            display: flex;
+            justify-content: flex-start;
+            width: 335px;
+            
             font-family: var(--var_font-poppins);
             color: var(--var_font-color-title);
             font-weight: 600;
+            line-height: 36px;
+            margin-bottom: 11px;
+        }
+
+        .form-container h1 {
+            font-size: 24px;
             font-size: 2.4rem;
         }
+
 
         .form-container h2{
             font-family: var(--var_font-roboto);
             font-weight: 500;
             font-size: 1.6rem;
+            width: 335px;
+            margin-bottom: 27px;
         }
 
         .input-sign {
@@ -95,6 +115,116 @@
             width: 335px;
             height: 44px;
             border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #868686;
+            appearance: none;
+            background-color: #191816;
+            padding-left: 37px;
+            color: var(--var_font-color);
+        }
+
+        .input-sign:focus{
+            border: 2px solid #FFC632;
+            outline: none;
+        }
+
+        .input-email {
+
+            background-image: url("./assets/mail.svg");
+            background-repeat: no-repeat;
+            background-position: 12px center;
+            
+        }
+
+        .label-input-field {
+            font-family: var(--var_font-poppins);
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .eye-div {
+            position: relative;
+        }
+
+        .eye-img {
+            margin-top: 5px;
+            position: absolute;
+            right: 12px;
+            top: 12px;
+        }
+        .input-password {
+            background-image: url("./assets/lock.svg");
+            background-repeat: no-repeat;
+            background-position: 12px center;
+            
+        }
+
+        .remenber-or-fogot-password {
+            display: flex;
+            width: 335px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        label[for="remember-me"] {
+            display: flex;
+            align-items: center;
+            font-family: var(--var_font-roboto);
+            font-size: 1.6rem;
+        }
+
+        input[name="Lembre-me"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border: 1px solid #868686;
+            border-radius: 4px;
+        }
+
+        .remenber-or-fogot-password p {
+            font-family: var(--var_font-poppins);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #FFC632;
+        }
+        
+        button {
+            width: 335px;
+            height: 51px;
+            background-color: #FFC632;
+            border: none;
+            border-radius: 4px;
+            font-family: var(--var_font-poppins);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #473404;
+            margin-bottom: 14px;
+        }
+
+        .register-yourself {
+            font-family: var(--var_font-poppins);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #FFC632;
+        }
+
+        p span {
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 768px)  {
+            .side-right {
+                display: none;
+            }
+
+            .side-left {
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+            }
+
         }
     </style>
 
@@ -102,31 +232,38 @@
 <body>
     <section>
         <div class="side-left">
-            <div>
-                <img class="logo" src="./assets/logo.png" alt="">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="">
             </div>
             <div class="form-container">
-                <h1>Faça seu login</h1>
+                <div class="header-form-container">
+                    <img class="login-img" src="./assets/log-in.svg" alt="">
+                    <h1>Faça seu login</h1>
+                </div>
                 <h2>Entre com suas informações de cadastro.</h2>
 
-                <label for="email">E-mail<br>
+                <label class="label-input-field" for="email">E-mail<br>
                     <input id="email" type="text" class="input-email input-sign" placeholder="Digite seu e-mail">
                 </label>
 
-                <label for="password">Senha<br>
-                    <input id="password" type="password" class="input-password input-sign" placeholder="Digite sua senha">
+                <label class="label-input-field" for="password">Senha<br>
+                    <div class="eye-div">
+                        <img class="eye-img" src="./assets/eye.svg" alt="">
+                        <input id="password" type="password" class="input-password input-sign" placeholder="Digite sua senha">
+                    </div>
                 </label>
 
+                <div class="remenber-or-fogot-password">
+                    <label for="remember-me">
+                        <input id="remember-me" type="checkbox" name="Lembre-me" value="Lembre-me">
+                        Lembre-me
+                    </label>
                 
-                <label for="remember-me">
-                    <input id="remember-me" type="checkbox" name="Lembre-me" value="Lembre-me">
-                    Lembre-me
-                </label>
-                
-                
-                <p>Esqueci minha senha</p>
+                    <p>Esqueci minha senha</p>
+                </div>
+
                 <button>Entrar</button>
-                <p>Não tem uma conta? Registre-se</p>
+                <p class="register-yourself">Não tem uma conta? <span>Registre-se</span></p>
             </div>
         </div>
 
