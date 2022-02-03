@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191816;
+    display: flex;
+}
+
+.sideLeft, .sideRight {
+    width: 50vw;
+    height: 100vh;
+}
+
+.sideLeft {
+    display: grid;
+    grid-template: 10% auto / auto;
+}
+
+.logo {
+    margin: 20px;
+}
+
+.formContainer {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #24221F;
+    width: 80%;
+    height: 60%;
+}
+
+.title {
+    display: flex;
+    fo
+}
+
+.sideRight {
+    background-image: url("../assets/side-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
