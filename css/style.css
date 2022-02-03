@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --var_font-poppins: 'Poppins', 'sans-serif';
+    --var_font-roboto: 'Roboto', 'sans-serif';
+}
+
+html {
+    font-size: 62.5%;
+}
+
 body {
-    background-color: #191816;
     display: flex;
+    background-color: #191816;
+    color: #AFB6C2;
+    
 }
 
 .sideLeft, .sideRight {
@@ -23,20 +36,44 @@ body {
     margin: 20px;
 }
 
-.formContainer {
+.container {
     align-self: center;
     justify-self: center;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     background-color: #24221F;
+    padding-top: 5%;
+    padding-bottom: 5%;
     width: 80%;
-    height: 60%;
+    height: 70%;
+    border-radius: 4px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
 .title {
     display: flex;
-    fo
 }
+
+h1 {
+    font-family: var(--var_font-poppins);
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #D4CCB6;
+    margin-left: 1rem;
+}
+
+h2 {
+    font-family: var(--var_font-roboto);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
 
 .sideRight {
     background-image: url("../assets/side-image.jpg");
