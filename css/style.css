@@ -13,7 +13,6 @@
 
 html {
     font-size: 62.5%;
-    
 }
 
 body {
@@ -25,27 +24,30 @@ body {
 
 .sideLeft, .sideRight {
     width: 50vw;
-    height: 100vh;
 }
 
 .sideLeft {
     display: grid;
-    grid-template: 10% auto / auto;
+    grid-template: auto auto / auto;
 }
 
 .logo {
+    height: 28px;
     margin: 20px;
 }
 
 .container {
-    align-self: center;
+    align-self: flex-start;
     justify-self: center;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #24221F;
     padding: 5%;
     width: 80%;
     border-radius: 4px;
+    margin: 10%;
+    
 }
 
 .formContainer {
@@ -54,7 +56,6 @@ body {
     justify-content: space-around;
     height: 100%;
     width: 33.5rem;
-    
 }
 
 .title {
@@ -170,6 +171,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+    min-height: 100vh;
 }
 
 @media screen and (max-width: 1024px) {
